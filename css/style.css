@@ -114,43 +114,6 @@ img {
     padding: 40px 0;
 }
 
-/*
-.who .who-group {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-}
-
-/* Configures the headers for the FAQ section, making them relative to allow for movement within group header 
-.who .who-group .who-group-header {
-    padding: 20px 0;
-    margin-bottom: 15px;
-    position: relative;
-}
-
-/* Specifies header h4 configuration 
-.who .who-group .who-group-header h4 {
-    font-weight: 600;
-    width: 95%;
-}
-/* Absolute configuration makes sure that the icons (i) are static within their header 
-.who .who-group .who-group-header i {
-    position: absolute;
-    right: 0;
-    top: 35px;
-    font-size: 1.3rem;
-    cursor: pointer;
-}
-
-
-.who .who-group .who-group-body {
-    display: none;
-}
-
-.who .who-group .who-group-body.open {
-    display: block;
-} 
-    */
-
 .who ul.who-menu {
     max-width: 600px;
     margin: auto;
@@ -190,15 +153,41 @@ img {
     display: none;
 }
 
+.tab-text {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.float-img {
+    float: right;
+    margin: 0 0 20px 30px;
+    width: 400px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .float-img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+        max-width: 100%;
+    }
+}
+
 .tab.active {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
-    display: flex;
+    display: block;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 10px;
     font-weight: 500;
+    overflow: hidden; /* contain floated images */
 }
 
 /* Video Section
