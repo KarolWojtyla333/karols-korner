@@ -1,3 +1,25 @@
+// Who Am I? Button Menu
+document.querySelectorAll('.who-menu li').forEach(item => {
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // Remove 'active' from all buttons
+      document.querySelectorAll('.who-menu li').forEach(el => el.classList.remove('active'));
+
+      // Add 'active' to clicked button
+      this.classList.add('active');
+
+      // Get the target tab ID
+      const target = this.getAttribute('data-target');
+
+      // Hide all tabs
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+
+      // Show the selected tab
+      document.getElementById(target).classList.add('active');
+    });
+  });
+
 // FAQ Accordion
 document.addEventListener('DOMContentLoaded', () => {
     const faqContainer = document.querySelector('.faq-content');

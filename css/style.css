@@ -114,24 +114,25 @@ img {
     padding: 40px 0;
 }
 
+/*
 .who .who-group {
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
 }
 
-/* Configures the headers for the FAQ section, making them relative to allow for movement within group header */
+/* Configures the headers for the FAQ section, making them relative to allow for movement within group header 
 .who .who-group .who-group-header {
     padding: 20px 0;
     margin-bottom: 15px;
     position: relative;
 }
 
-/* Specifies header h4 configuration */  
+/* Specifies header h4 configuration 
 .who .who-group .who-group-header h4 {
     font-weight: 600;
     width: 95%;
 }
-/* Absolute configuration makes sure that the icons (i) are static within their header */
+/* Absolute configuration makes sure that the icons (i) are static within their header 
 .who .who-group .who-group-header i {
     position: absolute;
     right: 0;
@@ -139,14 +140,16 @@ img {
     font-size: 1.3rem;
     cursor: pointer;
 }
- 
+
+
 .who .who-group .who-group-body {
     display: none;
 }
 
 .who .who-group .who-group-body.open {
     display: block;
-}
+} 
+    */
 
 .who ul.who-menu {
     max-width: 600px;
@@ -173,8 +176,26 @@ img {
 }
 
 .who ul.who-menu li.active {
+    display: block;
+    transition: 0.5s;
     background: var(--primary-color);
+}
+
+.who ul.who-menu li.active a {
     color: #fff;
+} 
+
+/* Tabs for Who Am I? section */
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 500;
 }
 
 /* Video Section
