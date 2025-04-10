@@ -87,7 +87,9 @@ img {
     background-size: contain;
     background-position: center bottom;
     height: 550px;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .block-one .block-one-content {
@@ -112,6 +114,11 @@ img {
 /* Who Am I? Section */
 .who {
     padding: 10px 0;
+}
+
+.who .container-sm {
+    width: 100%;
+    max-width: 900px;
 }
 
 .who ul.who-menu {
@@ -217,7 +224,7 @@ img {
     margin-bottom: 20px;
 } */
 
-/* Testimonials */
+/* Testimonials
 .testimonials {
     padding: 40px 0;
 }
@@ -233,43 +240,46 @@ img {
     gap: 30px;
 }
 
-/* Grab text from cards. Using p:nth-child(#), we can select the 2nd child (paragraph). */
+/* Grab text from cards. Using p:nth-child(#), we can select the 2nd child (paragraph).
 .testimonials .card p:nth-child(2) {
     margin-top: 30px;
     font-weight: bold;
-}
+} */
 
-/* Pricing */
-.pricing .pricing-grid {
+/* Projects */
+.projects .projects-grid {
+    /* width: 1000px; */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-top: 50px;
 }
 
-.pricing .pricing-card-subheading {
+.projects .projects-card-subheading {
     margin-bottom: 30px;
 }
 
-.pricing .pricing-card-price {
+.projects .projects-card-price {
     margin-bottom: 30px;
     padding: 20px 0;
     border-bottom: 1px solid #ccc;
 }
 
-.pricing ul {
+.projects ul {
     margin: 30px 0;
 }
 
-.pricing ul li {
+.projects ul li {
     margin-bottom: 20px;
 }
 
-.pricing ul li i {
+.projects ul li i {
     margin-right: 10px;
 }
 
-.pricing .pricing-footer {
+.projects .projects-footer {
     margin: 30px 0;
 }
 
@@ -387,7 +397,7 @@ img {
 }
 
 .container-sm {
-    max-width: 800px;
+    max-width: 1200px;
           /*TB LR*/
     margin: 0 auto;
     padding: 0 15px;
@@ -634,7 +644,7 @@ img {
     }
 
     .testimonials .testimonials-grid,
-    .pricing .pricing-grid,
+    .projects .projects-grid,
     .footer .footer-grid {
         grid-template-columns: 1fr;
     }
