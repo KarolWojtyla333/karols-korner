@@ -1,0 +1,692 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global variables */
+:root {
+    --primary-color: #4A5D23;
+    --text-color: #49796B;
+    --light-color: #f4f4f6;
+    --dark-color: #111;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    /* background: #bebebe; */
+    background: #49796B;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* What holds the whole navbar, and dictates the syntax of it */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navbar .main-menu ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+    color: var(--text-color);
+}
+
+.navbar ul li a i {
+    margin-right: 10px;
+}
+
+.navbar ul li:last-child a {
+    margin-left: 10px;
+}
+
+/* Block One */
+.block-one {
+    margin: 90px auto;
+    margin-bottom: 50px;
+}
+
+.block-one .container {
+    background: url('../images/blockone.png') no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    height: 550px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.block-one .block-one-content {
+    width: 80%;
+}
+
+.block-one .container .block-one-content .block-one-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-left: 458px;
+    margin-top: 164px;
+}
+
+.block-one .block-one-text {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+/* Who Am I? Section */
+.who {
+    padding: 10px 0;
+}
+
+.who .container-sm {
+    width: 100%;
+    max-width: 900px;
+}
+
+.who ul.who-menu {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ddd;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.who ul.who-menu li {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: var(--dark-color);
+}
+
+.who ul.who-menu li a:hover {
+    color: var(--text-color);
+}
+
+.who ul.who-menu li.active {
+    display: block;
+    transition: 0.5s;
+    background: var(--primary-color);
+    padding: 10px 10px;
+}
+
+.who ul.who-menu li.active a {
+    color: #fff;
+} 
+
+/* Tabs for Who Am I? section */
+.tab {
+    display: none;
+}
+
+.tab-text {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.float-img {
+    float: right;
+    margin: 0 0 20px 30px;
+    width: 400px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .float-img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+        max-width: 100%;
+    }
+}
+
+.tab.active {
+    max-width: 1600px;
+    margin: auto;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 40px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    overflow: hidden; /* contain floated images */
+    position: relative;
+}
+
+.tab.active::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tab.active > *:last-child {
+    margin-bottom: 0;
+}
+
+/* Video Section
+.video {
+    padding: 10px 0 40px;
+}
+
+.video .video-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video .video-preview {
+    margin-bottom: 20px;
+} */
+
+/* Testimonials
+.testimonials {
+    padding: 40px 0;
+}
+
+.testimonials .testimonials-heading {
+    width: 700px;
+    margin-bottom: 40px;
+}
+
+.testimonials .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Grab text from cards. Using p:nth-child(#), we can select the 2nd child (paragraph).
+.testimonials .card p:nth-child(2) {
+    margin-top: 30px;
+    font-weight: bold;
+} */
+
+/* Projects */
+.projects .projects-grid {
+    /* width: 1000px; */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.projects .projects-card-subheading {
+    margin-bottom: 30px;
+}
+
+.projects .projects-card-price {
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.projects ul {
+    margin: 30px 0;
+}
+
+.projects ul li {
+    margin-bottom: 20px;
+}
+
+.projects ul li i {
+    margin-right: 10px;
+}
+
+.projects .projects-footer {
+    margin: 30px 0;
+}
+
+/* FAQ */
+.faq {
+    padding: 40px 0;
+}
+
+.faq .faq-group {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+/* Configures the headers for the FAQ section, making them relative to allow for movement within group header */
+.faq .faq-group .faq-group-header {
+    padding: 20px 0;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Specifies header h4 configuration */  
+.faq .faq-group .faq-group-header h4 {
+    font-weight: 600;
+    width: 95%;
+}
+/* Absolute configuration makes sure that the icons (i) are static within their header */
+.faq .faq-group .faq-group-header i {
+    position: absolute;
+    right: 0;
+    top: 35px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+ 
+.faq .faq-group .faq-group-body {
+    display: none;
+}
+
+.faq .faq-group .faq-group-body.open {
+    display: block;
+}
+
+.faq ul.faq-menu {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ddd;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq ul.faq-menu li {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.faq ul.faq-menu li.active {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer ul li {
+    line-height:2.5;
+}
+
+.footer a {
+    color: #ccc;
+}
+
+.footer i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.footer .footer-grid {
+    display: grid;
+    /* grid-template-columns: 2fr repeat(3, 1fr); */
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .card {
+    margin: 20px 30px 20px 0;
+}
+
+.footer input[type='email'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1100px;
+          /*TB LR*/
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm {
+    max-width: 1200px;
+          /*TB LR*/
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background: var(--light-color);
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Text Classes */
+.text-xxl {
+    /* rem is 1xbase font size, so 2rem of base 16px is 32px */
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    /* rem is 1xbase font size, so 2rem of base 16px is 32px */
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    /* rem is 1xbase font size, so 2rem of base 16px is 32px */
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    /* rem is 1xbase font size, so 2rem of base 16px is 32px */
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    /* rem is 1xbase font size, so 2rem of base 16px is 32px */
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Background */
+.bg-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.bg-light {
+    background: var(--light-color);
+    color: #333;
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.bg-black {
+    background: #000;
+    color: #fff;
+}
+
+/* Hamburger Button */
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000; /* Brings it to the front */
+}
+
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2); /* (r, g, b, opacity) */
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    margin-top: 100px;
+    padding-right: 10px;
+}
+
+.mobile-menu ul li {
+    margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* Media Queries -- Allows us to add specific css for a range of screen sizes*/
+/* Ex: first @media will only apply the CSS within the {} to screens that have a width of 1100px or less. */
+@media (max-width: 1200px) {
+    .text-xxl {
+        font-size: 2.5rem;
+    }
+
+    .block-one .container {
+        height: 550px;
+        width: 770px;
+    }
+
+    .block-one .container .block-one-content .block-one-buttons {
+        margin-top: 238px;
+    }
+
+    .block-one .container .block-one-content .block-one-buttons .btn {
+        padding: 8px 10px;
+        margin-left: -212px;
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 780px) {
+    .navbar .main-menu {
+        display: none;
+    }
+
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+    .text-xxl {
+        font-size: 2rem;
+    }
+    
+    .block-one .block-one-text {
+        font-size: .9rem;
+    }
+
+    .block-one .container {
+        height: 420px;
+        width: 650px;
+    }
+
+    .block-one .container .block-one-content .block-one-buttons {
+        display: flex;
+    }
+}
+
+@media (max-width: 670px) {
+    .navbar .main-menu {
+        display: none;
+    }
+
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+    .block-one .container {
+        background: url('../images/hero-bg-mobile.png') no-repeat;
+        background-size: 350px 400px;
+        background-position: bottom;
+        height: 600px;
+    }
+
+    .block-one .block-one-content, 
+    .block-one .block-one-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .block-one .block-one-buttons .btn {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Testimonials */
+    .testimonials .testimonials-heading {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .testimonials .testimonials-grid,
+    .projects .projects-grid,
+    .footer .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* This is calling the parent divs in the footer grid */
+    .footer .footer-grid > div {
+        text-align: center;
+    }
+    
+    /* Text */
+    .text-xl {
+        font-size: 1.9rem;
+    }
+    
+    .text-lg {
+        font-size: 1.5rem;
+    }
+    
+    .text-md {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar .main-menu {
+        display: none;
+    }
+
+    .text-xxl {
+        font-size: 2rem;
+    }
+
+    .block-one .container {
+        height: 675px;
+        width: 400px;
+    }
+}
