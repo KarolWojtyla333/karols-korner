@@ -277,8 +277,9 @@ img {
 }
 
 .projects .projects-card-subheading {
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: auto;
+    margin-top: auto;
+    justify-content: space-between;
 }
 
 .projects .projects-card-body {
