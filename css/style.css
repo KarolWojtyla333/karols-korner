@@ -21,6 +21,22 @@ body {
     overflow-x: hidden;
 }
 
+section {
+    scroll-margin-top: 100px;
+}
+
+#who {
+    scroll-margin-top: 64px;
+}
+
+#pro {
+    scroll-margin-top: 104px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
     color: #333;
